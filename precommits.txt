@@ -1,0 +1,10 @@
+#!/bin/sh
+
+echo "Estamos analizando tu commit"
+
+if git grep -q -e "[A-Z0-9]\{20\}"; then
+    echo "Commit ok"
+    exit 0
+fi
+
+curl https://icanhazdadjoke.com
